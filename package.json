@@ -1,0 +1,29 @@
+{
+  "name": "rolewith-browser-extension",
+  "version": "1.0.0",
+  "description": "RoleWith.AI browser extension - Generate tailored CVs from any job posting",
+  "author": "RoleWith.AI",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RoleWith-AI/browser-extension.git"
+  },
+  "homepage": "https://www.rolewith.ai",
+  "scripts": {
+    "build": "node scripts/build.js all",
+    "build:chrome": "node scripts/build.js chrome",
+    "build:firefox": "node scripts/build.js firefox",
+    "build:safari": "echo 'Safari build requires Xcode - see README.md'",
+    "package": "node scripts/package.js",
+    "clean": "rm -rf dist",
+    "lint": "eslint src/",
+    "test": "echo 'No tests configured yet'"
+  },
+  "devDependencies": {
+    "archiver": "^6.0.0",
+    "eslint": "^8.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

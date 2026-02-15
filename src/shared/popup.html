@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RoleWith.AI</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <img src="../icons/icon-48.png" alt="RoleWith.AI" class="logo">
+      <h1>RoleWith.AI</h1>
+    </header>
+
+    <!-- Job Detection Status -->
+    <div id="job-status" class="status">
+      <span id="status-icon" class="status-icon">🔍</span>
+      <span id="status-text" class="status-text">Checking page...</span>
+    </div>
+
+    <!-- Current URL Display -->
+    <div id="url-display" class="url-display hidden">
+      <span class="url-label">Job URL:</span>
+      <span id="current-url" class="url-text"></span>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="actions">
+      <!-- Primary Action: Generate CV -->
+      <button id="btn-generate" class="btn btn-primary" disabled>
+        <span class="btn-icon">📄</span>
+        <span class="btn-text">Generate Tailored CV</span>
+      </button>
+
+      <!-- Future: Job Assessment (hidden until implemented) -->
+      <button id="btn-assess" class="btn btn-secondary hidden" disabled>
+        <span class="btn-icon">📊</span>
+        <span class="btn-text">Quick Match Assessment</span>
+        <span class="btn-badge">Coming Soon</span>
+      </button>
+    </div>
+
+    <!-- Assessment Results (Future Feature) -->
+    <div id="assessment-results" class="assessment hidden">
+      <div class="assessment-score">
+        <span id="match-score" class="score">--</span>
+        <span class="score-label">Match Score</span>
+      </div>
+      <div id="assessment-details" class="assessment-details">
+        <!-- Populated by JavaScript -->
+      </div>
+    </div>
+
+    <!-- Error Display -->
+    <div id="error-display" class="error hidden">
+      <span class="error-icon">⚠️</span>
+      <span id="error-text" class="error-text"></span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <a href="https://www.rolewith.ai" target="_blank" rel="noopener">Open RoleWith.AI</a>
+      <span class="separator">•</span>
+      <a href="https://www.rolewith.ai/help" target="_blank" rel="noopener">Help</a>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="config.js"></script>
+  <script src="api.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,288 @@
+/* RoleWith.AI Browser Extension Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #1f2937;
+  background: #ffffff;
+  min-width: 320px;
+  max-width: 400px;
+}
+
+.container {
+  padding: 16px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+}
+
+.header h1 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #4f46e5;
+}
+
+/* Status */
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  background: #f3f4f6;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.status-icon {
+  font-size: 18px;
+}
+
+.status-text {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.status.success {
+  background: #ecfdf5;
+}
+
+.status.success .status-text {
+  color: #059669;
+}
+
+.status.warning {
+  background: #fffbeb;
+}
+
+.status.warning .status-text {
+  color: #d97706;
+}
+
+/* URL Display */
+.url-display {
+  padding: 8px 12px;
+  background: #f9fafb;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  font-size: 12px;
+}
+
+.url-label {
+  color: #6b7280;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.url-text {
+  color: #374151;
+  word-break: break-all;
+  display: block;
+  max-height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: #4f46e5;
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #4338ca;
+}
+
+.btn-secondary {
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid #e5e7eb;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: #e5e7eb;
+}
+
+.btn-icon {
+  font-size: 16px;
+}
+
+.btn-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  padding: 2px 6px;
+  background: #fbbf24;
+  color: #78350f;
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+/* Assessment Results (Future Feature) */
+.assessment {
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.assessment-score {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.score {
+  display: block;
+  font-size: 48px;
+  font-weight: 700;
+  color: #4f46e5;
+}
+
+.score-label {
+  font-size: 12px;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.assessment-details {
+  font-size: 13px;
+}
+
+.assessment-details .match-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.assessment-details .match-item:last-child {
+  border-bottom: none;
+}
+
+.match-item.positive {
+  color: #059669;
+}
+
+.match-item.negative {
+  color: #dc2626;
+}
+
+/* Error Display */
+.error {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 12px;
+  background: #fef2f2;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.error-icon {
+  font-size: 16px;
+}
+
+.error-text {
+  font-size: 13px;
+  color: #dc2626;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding-top: 12px;
+  border-top: 1px solid #e5e7eb;
+  font-size: 12px;
+}
+
+.footer a {
+  color: #6b7280;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #4f46e5;
+  text-decoration: underline;
+}
+
+.separator {
+  color: #d1d5db;
+}
+
+/* Utility Classes */
+.hidden {
+  display: none !important;
+}
+
+/* Loading State */
+.loading .btn-text {
+  opacity: 0;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-top-color: currentColor;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
